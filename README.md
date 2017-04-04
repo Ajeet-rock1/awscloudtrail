@@ -22,5 +22,19 @@ How can i achieve these stuff?
 9:- you should install JQ (Java query) in your logstash then no need to write parser etc in your logstash node as input for pull the data from your node which have s3cmd and JQ.
 
 
+How to Install s3cmd in Linux and Manage Amazon s3 Buckets.
+
+s3cmd is a command line utility used for creating s3 buckets, uploading, retrieving and managing data to Amazon s3 storage. This article will help you to how to use install s3cmd on CentOS, RHEL, OpenSUSE, Ubuntu, Debian & LinuxMint systems and manage s3 buckets via command line in easy steps. 
+
+Install s3cmd Package:-
+
+s3cmd is available in default rpm repositories for CentOS,RHEL and Ubuntu systems, You can install it using simply executing following commands on your system.
+
+
+
+
+
+
+
 
 
