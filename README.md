@@ -17,4 +17,10 @@ How can i achieve these stuff?
 
 7:-  we need to create script for pull the data from Cloudtrail S3 bucket to your premises
 
+8:-  MOst Important thing which is regarding for Cloudtrail Log becasue cloudtrail log format is json and we need to same thing in your env then you should have any parser or batch file like JQ.
+
+9:- you should install JQ (Java query) in your logstash then no need to write parser etc in your logstash node as input for pull the data from your node which have s3cmd and JQ.
+
+
+
 
