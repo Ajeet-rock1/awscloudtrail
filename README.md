@@ -111,37 +111,37 @@ Use following command to list all s3 buckets in your aws account.
 
 To create a new bucket in Amazon s3 use below command. It will create bucket named delta in S3 account.
 
-# s3cmd mb s3://delta
+# s3cmd mb s3://dummy
 
-Bucket 's3://delta/' created
+Bucket 's3://dummy/' created
 
 3. Uploading file in Bucket
 
 Below command will upload file test.txt to s3 bucket using s3cmd command.
 
-# s3cmd put file.txt s3://tecadmin/
+# s3cmd put file.txt s3://dummy/
 
-file.txt -> s3://delta/test.txt  [1 of 1]
+file.txt -> s3://dummy/test.txt  [1 of 1]
  70119 of 70119   100% in    0s  976.82 kB/s  done
  
  4. Uploading Directory in Bucket
 
 If we need to upload entire directory use -r to upload it recursively like below.
 
-# s3cmd put -r backup s3://delta/
+# s3cmd put -r backup s3://dummy/
 
-backup/test.txt -> s3://delta/backup/test.txt  [1 of 2]
+backup/test.txt -> s3://dummy/backup/test.txt  [1 of 2]
  9876 of 9876  100% in    0s    12.98 kB/s  done
-backup/test1.txt -> s3://delta/backup/test1.txt  [2 of 2]
+backup/test1.txt -> s3://dummy/backup/test1.txt  [2 of 2]
  0 of 0     0% in    0s     0.00 B/s  done
  
  Make sure you are not adding trailing slash/ in upload directory named backup (eg: backup/), else it will upload only content of backup directory only.
  
- # s3cmd put -r backup/ s3://delta/
+ # s3cmd put -r backup/ s3://dummy/
 
-backup/test.txt -> s3://delta/test.txt  [1 of 2]
+backup/test.txt -> s3://dummy/test.txt  [1 of 2]
 70119 of 70119   100% in    0s    12.98 kB/s  done
-backup/test1.txt -> s3://delta/test1.txt  [2 of 2]
+backup/test1.txt -> s3://dummy/test1.txt  [2 of 2]
  0 of 0     0% in    0s     0.00 B/s  done
 
 
@@ -149,18 +149,18 @@ backup/test1.txt -> s3://delta/test1.txt  [2 of 2]
 
 List the objects of s3 bucket using ls switch with s3cmd.
 
-# s3cmd ls s3://delta/
+# s3cmd ls s3://dummy/
 
-                       DIR   s3://delta/backup/
-2017-04-04 10:58    190216   s3://delta/test.txt
+                       DIR   s3://dummy/backup/
+2017-04-04 10:58    190216   s3://dummy/test.txt
 
 6. Download Files from Bucket
 
 Some times if we need to download files from s3 bucket, Use following commands to download it.
 
-# s3cmd get s3://delta/test.txt
+# s3cmd get s3://dummy/test.txt
 
-s3://delta/test.txt -> ./test.txt  [1 of 1]
+s3://dummy/test.txt -> ./test.txt  [1 of 1]
  4 of 4   100% in    0s    10.84 B/s  done
  
  7. Remove Data of S3 Bucket
@@ -168,20 +168,20 @@ s3://delta/test.txt -> ./test.txt  [1 of 1]
 To remove files are folder from s3 bucket use following commands.
 
  Removing file from s3 bucket 
-# s3cmd del s3://delta/test.txt
+# s3cmd del s3://dummy/test.txt
 
-File s3://delta/test.txt deleted
+File s3://dummy/test.txt deleted
 
  Removing directory from s3 bucket 
-# s3cmd del s3://delta/backup
+# s3cmd del s3://dummy/backup
 
-File s3://delta/backup deleted
+File s3://dummy/backup deleted
 
 8. Remove Object in  S3 Bucket
 
 If we don’t need Object in s3 bucket any more, we can simply delete it using following command. Before removing bucket make sure its empty.
 
-s3cmd del -r  s3://delta/test
+s3cmd del -r  s3://dummy/test
 
 
 
